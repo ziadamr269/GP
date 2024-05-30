@@ -60,5 +60,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    port = 8200  # the custom port you want
-    app.run(host='127.0.0.1', port=port)
+    app.run(debug=True)
