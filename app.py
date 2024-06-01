@@ -60,6 +60,13 @@ def predict():
 
     return jsonify(results)
 
+@app.route('/test')
+def home():
+    return "Hello, World!"
+
+def scheduled_task():
+    print(f"Scheduled task running at {datetime.datetime.now()}")
+
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
