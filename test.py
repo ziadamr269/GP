@@ -1,4 +1,14 @@
-from sklearn.preprocessing import LabelEncoder
+from flask import Flask
+import datetime
 
-label_encoder = LabelEncoder()
-data['sentiment_encoded'] = label_encoder.fit_transform(data['sentiment'])
+app = Flask(__name__)
+
+@app.route('/predict')
+def home():
+    return "Hello, World!"
+
+def scheduled_task():
+    print(f"Scheduled task running at {datetime.datetime.now()}")
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=5000)
