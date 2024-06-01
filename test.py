@@ -3,7 +3,7 @@ import datetime
 
 app = Flask(__name__)
 
-@app.route('/predict')
+@app.route('/test')
 def home():
     return "Hello, World!"
 
