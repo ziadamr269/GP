@@ -1,6 +1,7 @@
 import os
 import datetime
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
@@ -10,6 +11,7 @@ from sklearn.metrics import classification_report
 
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Load the dataset
 file_path = 'twitter_training.csv'  # Update with the correct path
